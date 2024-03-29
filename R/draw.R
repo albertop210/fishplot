@@ -229,7 +229,7 @@ checkCol <- function(fish){
 #' @param cex.title A numeric value for scaling the title size
 #' @param cex.vlab A numeric value for scaling the top label size default is 0.7
 #' @param font.family A string to specify the font family used for labels and legend
-#' @param font.type An integer to specify the font type like bold, italic
+#' @param font.type An integer to specify the font type like bold, italic, etc
 #' @param ramp.angle A numeric value between 0 and 1 that indicates how steeply the shape should expand from it's leftmost origin to the first measured point. Only used when shape="polygon".
 #' @param bg.type A string giving the background type - either "gradient" (default) or "solid". Default is "gradient".
 #' @param bg.col A string or vector of strings giving the background color. For type "solid", one color expected. For type "gradient", a vector of three colors is expected.
@@ -345,7 +345,7 @@ fishPlot <- function(fish,shape="polygon", vlines=NULL, col.vline="#FFFFFF99", v
 #' @param ypos The y coordinate at which to draw the top of the legend (default -5)
 #' @param nrow An integer number of rows which should be used for the legend
 #' @param cex A numerical value giving the amount by which the legend should be magnified relative to the default.
-#' @param font.type An integer to specify the font type like bold, italic
+#' @param font.type An integer to specify the font type like bold, italic, etc
 #' @param widthratio adjusts width of columns relative to longest legend entry (smaller value = more spacing)
 #' @param xsp horizontal spacing factor
 #'
