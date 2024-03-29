@@ -228,6 +228,8 @@ checkCol <- function(fish){
 #' @param title.btm A string for the title at the bottom left, internal to the plot
 #' @param cex.title A numeric value for scaling the title size
 #' @param cex.vlab A numeric value for scaling the top label size default is 0.7
+#' @param font.family A string to specify the font family used for labels and legend
+#' @param font.type An integer to specify the font type like bold, italic
 #' @param ramp.angle A numeric value between 0 and 1 that indicates how steeply the shape should expand from it's leftmost origin to the first measured point. Only used when shape="polygon".
 #' @param bg.type A string giving the background type - either "gradient" (default) or "solid". Default is "gradient".
 #' @param bg.col A string or vector of strings giving the background color. For type "solid", one color expected. For type "gradient", a vector of three colors is expected.
@@ -242,7 +244,7 @@ checkCol <- function(fish){
 #'
 fishPlot <- function(fish,shape="polygon", vlines=NULL, col.vline="#FFFFFF99", vlab=NULL,
                      border=0.5, col.border="#777777", pad.left=0.2, ramp.angle=0.5,
-                     title=NULL, title.btm=NULL, cex.title=NULL, cex.vlab=0.7,
+                     title=NULL, title.btm=NULL, cex.title=NULL, cex.vlab=0.7,font.family="sans",font.type=1,
                      bg.type="gradient", bg.col=c("bisque","darkgoldenrod1","darkorange3")){
 
   #make sure we have the right number of colors
@@ -318,7 +320,7 @@ fishPlot <- function(fish,shape="polygon", vlines=NULL, col.vline="#FFFFFF99", v
     abline(v=vlines,col=col.vline,xpd=F)
 
     if(!is.null(vlab)){
-      text(vlines,103,vlab,pos=3,cex=cex.vlab,col="grey20",xpd=NA)
+      text(vlines,103,vlab,pos=3,cex=cex.vlab,vfont=NULL,family=font.family,font=font.type,col="grey20",xpd=NA)
     }
   }
 
@@ -326,12 +328,12 @@ fishPlot <- function(fish,shape="polygon", vlines=NULL, col.vline="#FFFFFF99", v
     #get the center
     xmax = tail(fish@timepoints,n=1)
     cent = (xmax/2)-(pad/2)
-    text(cent,112,title,pos=3,cex=cex.title,xpd=T)
+    text(cent,112,title,pos=3,cex=cex.title,xpd=T,family=font.family,font=font.type)
   }
 
 
   if(!is.null(title.btm)){
-    text(min(fish@timepoints)-(pad*1.2),2,title.btm,pos=4,cex=cex.title)
+    text(min(fish@timepoints)-(pad*1.2),2,title.btm,pos=4,cex=cex.title,family=font.family,font=font.type)
   }
 
 }
@@ -343,6 +345,7 @@ fishPlot <- function(fish,shape="polygon", vlines=NULL, col.vline="#FFFFFF99", v
 #' @param ypos The y coordinate at which to draw the top of the legend (default -5)
 #' @param nrow An integer number of rows which should be used for the legend
 #' @param cex A numerical value giving the amount by which the legend should be magnified relative to the default.
+#' @param font.type An integer to specify the font type like bold, italic
 #' @param widthratio adjusts width of columns relative to longest legend entry (smaller value = more spacing)
 #' @param xsp horizontal spacing factor
 #'
@@ -354,7 +357,7 @@ fishPlot <- function(fish,shape="polygon", vlines=NULL, col.vline="#FFFFFF99", v
 #' }
 #' @export
 #'
-drawLegend <- function(fish, xpos=0, ypos=-5, nrow=NULL, cex=1, widthratio=NULL, xsp=1){
+drawLegend <- function(fish, xpos=0, ypos=-5, nrow=NULL, cex=1, font.type=1, widthratio=NULL, xsp=1){
 
   if(is.null(fish@clone.labels)){
     fish@labels=1:dim(fish@fish_table)[1]
@@ -379,6 +382,6 @@ drawLegend <- function(fish, xpos=0, ypos=-5, nrow=NULL, cex=1, widthratio=NULL,
   } 
   
   legend(xpos,ypos,fill=col, legend=lab, bty="n", ncol=ncol, xpd=T, col="grey30", border="grey30", cex=cex*0.8,
-         text.width=col_width, x.intersp=xsp)
+         text.width=col_width, x.intersp=xsp, text.font = font.type)
   
 }
