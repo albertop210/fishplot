@@ -320,7 +320,7 @@ fishPlot <- function(fish,shape="polygon", vlines=NULL, col.vline="#FFFFFF99", v
     abline(v=vlines,col=col.vline,xpd=F)
 
     if(!is.null(vlab)){
-      text(vlines,103,vlab,pos=3,cex=cex.vlab,vfont=NULL,family=font.family,font=font.type,col="grey20",xpd=NA)
+      text(vlines,104,vlab,pos=3,cex=cex.vlab,vfont=NULL,family=font.family,font=font.type,col="grey20",xpd=NA)
     }
   }
 
