@@ -26,7 +26,7 @@ drawLegend(
 
 \item{cex}{A numerical value giving the amount by which the legend should be magnified relative to the default.}
 
-\item{font.type}{An integer to specify the font type like bold, italic}
+\item{font.type}{An integer to specify the font type like bold, italic, etc}
 
 \item{widthratio}{adjusts width of columns relative to longest legend entry (smaller value = more spacing)}
 
