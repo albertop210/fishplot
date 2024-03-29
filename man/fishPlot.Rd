@@ -53,7 +53,7 @@ fishPlot(
 
 \item{font.family}{A string to specify the font family used for labels and legend}
 
-\item{font.type}{An integer to specify the font type like bold, italic}
+\item{font.type}{An integer to specify the font type like bold, italic, etc}
 
 \item{bg.type}{A string giving the background type - either "gradient" (default) or "solid". Default is "gradient".}
 
