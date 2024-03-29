@@ -10,6 +10,7 @@ drawLegend(
   ypos = -5,
   nrow = NULL,
   cex = 1,
+  font.type = 1,
   widthratio = NULL,
   xsp = 1
 )
@@ -24,6 +25,8 @@ drawLegend(
 \item{nrow}{An integer number of rows which should be used for the legend}
 
 \item{cex}{A numerical value giving the amount by which the legend should be magnified relative to the default.}
+
+\item{font.type}{An integer to specify the font type like bold, italic}
 
 \item{widthratio}{adjusts width of columns relative to longest legend entry (smaller value = more spacing)}
 
