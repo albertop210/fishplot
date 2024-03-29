@@ -8,7 +8,7 @@ Added the possibility to choose the font family and type in titles, labels and l
     #install devtools if you don't have it already for easy installation
     install.packages("devtools")
     library(devtools)
-    install_github("chrisamiller/fishplot")
+    install_github("albertop210/fishplot")
 
 If you prefer to build the package by hand, follow these steps:
 
@@ -16,9 +16,9 @@ If you prefer to build the package by hand, follow these steps:
 
 - Download and build from source:
 
-        git clone git@github.com:chrisamiller/fishplot.git
+        git clone https://github.com/albertop210/fishplot.git
         R CMD build fishplot
-        R CMD INSTALL fishplot_0.2.tar.gz
+        R CMD INSTALL fishplot_0.5.2.tar.gz
 
 ## Usage
 ```R
