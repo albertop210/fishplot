@@ -52,7 +52,8 @@ If you prefer to build the package by hand, follow these steps:
     #and providing both timepoints to label and a plot title
     fishPlot(fish,shape="spline",title.btm="Sample1",
              cex.title=0.5, vlines=c(0,150), 
-             vlab=c("day 0","day 150"))
+             vlab=c("day 0","day 150"),
+             font.family = "serif", font.type = 1)
 ```
 
 ## Outputs
