@@ -1,6 +1,6 @@
 An R package for visualizing changes in the subclonal architecture of tumors. 
 
-## EDIT ##
+### -- New -- 
 Added the possibility to choose the font family and type in titles, labels and legend.
 
 ## Installation instructions:
